@@ -96,8 +96,6 @@ areas = 0.5 * np.abs(np.cross(vec1, vec2))
 
 # Toss out GPS data outside of mesh domain
 xy_gps, Ve, Vn, Sige, Sign = (arr[ind_gps] for arr in (xy_gps, Ve, Vn, Sige, Sign))
-%matplotlib inline
-import mpld3
 mpld3.enable_notebook()
 #plt.tripcolor(nodes[:,0], nodes[:,1],triDel.simplices.copy(),linewidth=0.25,facecolors=areas)
 plt.triplot(nodes[:,0], nodes[:,1],triDel.simplices.copy(),linewidth=0.25)
